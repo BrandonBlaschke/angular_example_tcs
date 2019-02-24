@@ -1,0 +1,25 @@
+<div class="col-12">
+    <table class="table table-hover" id="ResultTable">
+        <thead>
+          <tr>
+            <th scope="col">Photo</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">City, State, Country</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of people">
+              <th scope="row"><img src="https://sported.org.uk/wp-content/uploads/2015/10/Blank-person-photo1.png" class="rounded center-block" width="25" height="25" /></th>
+              <td>{{p.FirstName + " " + p.LastName}}</td>
+              <td>{{p.Email}}</td>
+              <td>{{p.Phone}}</td>
+              <td>{{p.City + ", " + p.State + ", " + p.Country}}</td>
+              <td><button class="btn btn-danger" (click)="deletePerson(p.Id)" style="margin-right: 1.3em">Delete</button>
+                <button class="btn btn-primary" [routerLink]="['/details', p.Id]" routerLinkActive="active current">Edit</button></td>
+            </tr>
+        </tbody>
+      </table>
+</div>

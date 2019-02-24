@@ -1,0 +1,65 @@
+<div class="col-12">    
+  <div class="container">
+    <div class="row">
+        <div class="col12">
+            <h1>Seach People</h1>
+            <small class="text-muted"> Search for people by filling in the information and clicking search </small>
+        </div>
+    </div>
+
+    <form>
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <input id="Name" class="form-control" placeholder="Name" />
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <input id="Email" class="form-control" placeholder="Email" />
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <input id="Phone" class="form-control" placeholder="Phone" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <input id="Country" class="form-control" placeholder="Country" />
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <input id="State" class="form-control" placeholder="State" />
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <input id="City" class="form-control" placeholder="City" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="btn-group" role="group">
+                            <button type="button" (click)="search();" class="btn btn-info">Search</button>
+                            <button type="button" (click)="clearer()" class="btn btn-info">Clear</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+    <div class="row" style="padding-top: 2em">
+        <h2>Search Results</h2>
+    </div>
+
+    <div class="row">
+      <div class="table-responsive">
+          <app-table-results [people]="people"></app-table-results>
+      </div>
+    </div>
+</div>
+
+</div>
+
+
